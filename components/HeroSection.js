@@ -5,7 +5,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section className='flex h-screen  flex-col items-center p-4'>
-      <div className='flex h-full basis-[100%] flex-col items-center justify-center'>
+      <div className='flex h-full basis-[80%] flex-col items-center justify-center'>
         <h1 className='mb-4 text-5xl font-black text-white md:text-7xl'>
           ANIL OLI
         </h1>
@@ -14,10 +14,26 @@ const HeroSection = () => {
         </p>
         <Link href={"#contact-me"}>
           <a
-            className='mt-8 w-full bg-dark-gray py-4 text-center text-base font-medium text-white outline-none focus-within:bg-dark-gray/60 hover:bg-dark-gray/60'
+            className='mt-20 w-full bg-dark-gray py-4 text-center text-base font-medium text-white outline-none focus-within:bg-dark-gray/60 hover:bg-dark-gray/60'
             tabIndex={1}
           >
             CONTACT ME
+          </a>
+        </Link>
+        <Link href={"#skills"}>
+          <a
+            className='mt-2 w-full bg-dark-gray py-4 text-center text-base font-medium text-white outline-none focus-within:bg-dark-gray/60 hover:bg-dark-gray/60'
+            tabIndex={1}
+          >
+            SKILLS
+          </a>
+        </Link>
+        <Link href={"#portfolio"}>
+          <a
+            className='mt-2 w-full bg-dark-gray py-4 text-center text-base font-medium text-white outline-none focus-within:bg-dark-gray/60 hover:bg-dark-gray/60'
+            tabIndex={1}
+          >
+            PORTFOLIO
           </a>
         </Link>
       </div>

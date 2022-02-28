@@ -4,7 +4,7 @@ import React from "react";
 const AboutMe = () => {
   return (
     <section
-      className='flex min-h-screen w-full shrink-0 items-center justify-center p-4'
+      className='mt-20 flex w-full shrink-0 scroll-m-24 items-center justify-center p-4'
       id='about-me'
     >
       <div className='grid justify-items-center lg:grid-flow-col lg:justify-items-start lg:gap-8'>
