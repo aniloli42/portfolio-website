@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import {
   AboutMe,
@@ -11,7 +12,11 @@ import {
 
 const index = () => {
   return (
-    <div className='m-0 min-h-screen overflow-x-hidden scroll-smooth bg-dark-blue'>
+    <div className='overflow-x-hidden scroll-smooth bg-dark-blue'>
+      {/* For SEO Purposes */}
+      <Head>
+        <title>Anil Oli | Portfolio</title>
+      </Head>
       <header>
         <Navbar />
       </header>

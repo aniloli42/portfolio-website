@@ -6,11 +6,11 @@ const Skills = () => {
       className='mt-20 flex scroll-m-24 flex-col items-center px-4'
       id='skills'
     >
-      <h2 className='mb-8 text-3xl font-bold text-white underline underline-offset-4 lg:mb-0'>
+      <h2 className='mb-16 text-3xl font-bold text-white underline underline-offset-4'>
         Skills
       </h2>
 
-      <div className='my-12 flex max-w-lg flex-wrap justify-center gap-2 md:gap-3'>
+      <div className=' flex max-w-lg flex-wrap justify-center gap-2 md:gap-3'>
         <Skill skill={"HTML"} />
         <Skill skill={"CSS"} />
         <Skill skill={"Javascript"} />

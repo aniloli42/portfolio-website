@@ -2,26 +2,35 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [active, setActive] = useState("/");
+  const [activeSection, setActiveSection] = useState("/");
   const [scroll, setScroll] = useState(false);
   const [activeNav, setActiveNav] = useState(false);
+
+  useEffect(() => {
+    /*
+    Listen the window scroll,
+    if window in top: hide
+    else: show
+    */
+    window.addEventListener("scroll", scrollWindow);
+
+    /* 
+    Listen the window scroll.
+    And,
+    Highlight the active section based on scroll postion
+    */
+    window.addEventListener("scroll", handleScrollSectionChange);
+
+    return () => {
+      window.removeEventListener("scroll", scrollWindow);
+      window.removeEventListener("scroll", handleScrollSectionChange);
+    };
+  }, []);
 
   const scrollWindow = () => {
     if (scrollY === 0) return setScroll(false);
     setScroll(true);
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", scrollWindow);
-
-    return () => {
-      window.removeEventListener("scroll", scrollWindow);
-    };
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScrollSectionChange);
-  }, []);
 
   function handleScrollSectionChange() {
     // get the sections
@@ -32,14 +41,16 @@ const Navbar = () => {
       const sectionCurrentOffset = section.offsetTop - 200;
 
       if (scrollY >= sectionCurrentOffset) {
-        setActive(section.id !== "" ? `#${section.id}` : "/");
+        setActiveSection(section.id !== "" ? `#${section.id}` : "/");
       }
     });
   }
 
   useEffect(() => {
+    /* 
+    Start Listening the resize of window
+    */
     window.addEventListener("resize", handlewindowResize);
-
     handlewindowResize();
 
     return () => {
@@ -47,16 +58,24 @@ const Navbar = () => {
     };
   }, []);
 
+  /* 
+  Handle the window resize, when resize hide the nav for mobile ease.
+  */
   function handlewindowResize() {
-    console.log("called");
     if (window.innerWidth > "768") return setActiveNav(true);
-    console.log(activeNav);
     setActiveNav(false);
   }
 
+  /* 
+  Used to toggle the activeNav. This is require for mobile navbar view activation.
+  */
   const toggleNavActive = () => {
     if (window.innerWidth > "768") return;
     setActiveNav((prev) => !prev);
+
+    if (!activeNav) return (window.document.body.style.overflow = "hidden");
+
+    window.document.body.style.overflow = "auto";
   };
 
   return (
@@ -81,37 +100,37 @@ const Navbar = () => {
               <NavLink
                 href={"/"}
                 text={"HOME"}
-                active={active}
+                active={activeSection}
                 toggleNavActive={toggleNavActive}
               />
               <NavLink
                 href={"#about-me"}
                 text={"ABOUT ME"}
-                active={active}
+                active={activeSection}
                 toggleNavActive={toggleNavActive}
               />
               <NavLink
                 href={"#myjourney"}
                 text={"MY JOURNEY"}
-                active={active}
+                active={activeSection}
                 toggleNavActive={toggleNavActive}
               />
               <NavLink
                 href={"#skills"}
                 text={"SKILLS"}
-                active={active}
+                active={activeSection}
                 toggleNavActive={toggleNavActive}
               />
               <NavLink
                 href={"#portfolio"}
                 text={"PORTFOLIO"}
-                active={active}
+                active={activeSection}
                 toggleNavActive={toggleNavActive}
               />
               <NavLink
                 href={"#contact-me"}
                 text={"CONTACT ME"}
-                active={active}
+                active={activeSection}
                 toggleNavActive={toggleNavActive}
               />
             </nav>
