@@ -13,7 +13,7 @@ const AboutMe = () => {
         </h2>
         <div className='w-44 lg:w-auto lg:[grid-column:1/2] lg:[grid-row:1/3]'>
           <Image
-            src={require("../public/assets/anil.jpg")}
+            src={require("../../public/assets/anil.jpg")}
             alt='photo of Anil Oli'
             layout='intrinsic'
             className='w-12 rounded-3xl'

@@ -1,4 +1,5 @@
 import React from "react";
+import PortfolioType from "./PortfolioType";
 
 const Portfolio = () => {
   return (
@@ -18,17 +19,6 @@ const Portfolio = () => {
         <PortfolioType type='Mobile App' />
       </div>
     </section>
-  );
-};
-
-const PortfolioType = ({ type, active }) => {
-  return (
-    <button
-      className={`flex shrink-0 items-center justify-center rounded-full border-2 px-4 py-1 text-base text-white hover:bg-gray-400 
-    ${active ? "bg-gray-400" : "bg-transparent"}`}
-    >
-      {type}
-    </button>
   );
 };
 
