@@ -10,7 +10,7 @@ const datas = [
   }
 ];
 
-const MyJourney = () => {
+const MyJourney = ({ journeys }) => {
   return (
     <section
       className='mt-20 flex scroll-m-20  items-center justify-center px-4'
@@ -21,8 +21,8 @@ const MyJourney = () => {
           MY JOURNEY
         </h2>
         <div className='relative my-12 border-l-4'>
-          {datas?.map((data, index) => (
-            <Journey key={index} {...data} />
+          {journeys?.map((journey) => (
+            <Journey key={journey.node.id} {...journey.node} />
           ))}
         </div>
       </div>

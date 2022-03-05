@@ -22,7 +22,7 @@ const AboutMe = () => {
 
         <p className='mt-4 max-w-xs text-center text-base text-white sm:max-w-md sm:text-xl lg:-mt-36 lg:text-left'>
           I am Anil Oli from Dang, Nepal. I am pursing the web development
-          journey since 2020. Aim to learn and capable to solve different
+          journey since 2021. Aim to learn and capable to solve different
           problems.
         </p>
       </div>

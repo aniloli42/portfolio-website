@@ -3,19 +3,38 @@ import React from "react";
 import {
   AboutMe,
   ContactMe,
+  Footer,
   HeroSection,
   MyJourney,
   Navbar,
   Portfolio,
   Skills
 } from "../components";
+import {
+  getJourneys,
+  getProjects,
+  getProjectTypes,
+  getSkills
+} from "../services";
 
-const index = () => {
+export const getStaticProps = async () => {
+  const journeys = await getJourneys();
+  const skills = await getSkills();
+  const projectType = await getProjectTypes();
+  const projects = await getProjects();
+
+  return {
+    props: { journeys, projects, projectType, skills }
+  };
+};
+
+const index = ({ journeys, projects, projectType, skills }) => {
   return (
     <div className='overflow-x-hidden scroll-smooth bg-dark-blue'>
       {/* For SEO Purposes */}
       <Head>
         <title>Anil Oli | Portfolio</title>
+        <link rel='icon' href='../assets/anil.jpg' />
       </Head>
       <header>
         <Navbar />
@@ -23,11 +42,14 @@ const index = () => {
       <main className='flex flex-col'>
         <HeroSection />
         <AboutMe />
-        <MyJourney />
-        <Skills />
-        <Portfolio />
+        <MyJourney journeys={journeys} />
+        <Skills skills={skills} />
+        <Portfolio projects={projects} projectType={projectType} />
         <ContactMe />
       </main>
+      <footer className='my-4 flex flex-wrap items-center justify-center'>
+        <Footer />
+      </footer>
     </div>
   );
 };

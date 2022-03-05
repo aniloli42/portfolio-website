@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import PortfolioType from "./PortfolioType";
+import Project from "./Project";
 
-const Portfolio = () => {
+const Portfolio = ({ projects, projectType }) => {
+  const [activeType, setActiveType] = useState("All");
+  const [filterProjects, setFilterProjects] = useState([]);
+
+  const filterProject = useCallback(() => {
+    if (activeType !== "All") {
+      const result = projects.filter(
+        (project) => activeType === project.node.projectTypes?.type
+      );
+
+      return setFilterProjects(result);
+    }
+
+    setFilterProjects(projects);
+  }, [activeType, projects]);
+
+  useEffect(() => {
+    filterProject();
+    // eslint-disable-next-line
+  }, [filterProject]);
+
+  const toggleActive = (type) => {
+    if (activeType === type) {
+      setActiveType("All");
+      return filterProject();
+    }
+
+    setActiveType(type);
+    return filterProject();
+  };
+
   return (
     <section
       id='portfolio'
@@ -11,12 +42,29 @@ const Portfolio = () => {
         PORTFOLIO
       </h2>
 
-      <div className='flex max-w-sm justify-start gap-4 overflow-x-auto px-8 pb-4 md:max-w-none md:flex-wrap md:justify-center'>
-        <PortfolioType type='All' active />
-        <PortfolioType type='Frontend' />
-        <PortfolioType type='Backend' />
-        <PortfolioType type={"Full Stack"} />
-        <PortfolioType type='Mobile App' />
+      <div className='flex max-w-xs justify-start gap-4 overflow-x-auto px-8 pb-4 md:max-w-none md:flex-wrap md:justify-center'>
+        {projectType?.map((type) => {
+          return (
+            <PortfolioType
+              key={type.node.id}
+              {...type.node}
+              active={activeType === type.node.type}
+              toggleActive={toggleActive}
+            />
+          );
+        })}
+      </div>
+
+      <div className='my-4 flex max-w-7xl flex-col flex-wrap justify-center gap-4 md:flex-row'>
+        {filterProjects?.map((project) => (
+          <Project key={project.node.id} {...project.node} />
+        ))}
+
+        {filterProjects?.length === 0 && (
+          <p className='text-center text-lg font-thin text-gray-300'>
+            Sorry, Result not found. Project will be uploaded soon.
+          </p>
+        )}
       </div>
     </section>
   );

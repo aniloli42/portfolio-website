@@ -1,40 +1,7 @@
 import React from "react";
 import Skill from "./Skill";
 
-const skills = [
-  {
-    skill: "HTML"
-  },
-  {
-    skill: "CSS"
-  },
-  {
-    skill: "Javascript"
-  },
-  {
-    skill: "React Js"
-  },
-  {
-    skill: "Node Js"
-  },
-  {
-    skill: "Express Js"
-  },
-  {
-    skill: "Mongo DB"
-  },
-  {
-    skill: "GIT"
-  },
-  {
-    skill: "Github"
-  },
-  {
-    skill: "SEO"
-  }
-];
-
-const Skills = () => {
+const Skills = ({ skills }) => {
   return (
     <section
       className='mt-20 flex scroll-m-24 flex-col items-center px-4'
@@ -45,8 +12,8 @@ const Skills = () => {
       </h2>
 
       <div className=' flex max-w-lg flex-wrap justify-center gap-2 md:gap-3'>
-        {skills?.map((skill, index) => (
-          <Skill key={index} {...skill} />
+        {skills?.map((skill) => (
+          <Skill key={skill.node.id} {...skill?.node} />
         ))}
       </div>
     </section>
