@@ -7,7 +7,7 @@ const Skills = ({ skills }) => {
       className='mt-20 flex scroll-m-24 flex-col items-center px-4'
       id='skills'
     >
-      <h2 className='mb-16 text-3xl font-bold text-white underline underline-offset-4'>
+      <h2 className='mb-16 text-3xl font-bold text-main underline underline-offset-4'>
         Skills
       </h2>
 

@@ -11,16 +11,16 @@ const Project = (props) => {
   } = props;
 
   return (
-    <div className='min-h-xl max-w-xs shrink-0 rounded-lg bg-white p-4'>
+    <div className='min-h-xl max-w-xs shrink-0 rounded-lg bg-white p-4 shadow-md'>
       {/* showcase */}
       <div className='relative flex min-h-[150px] min-w-[200px] items-end justify-center overflow-hidden rounded-lg bg-transparent'>
         {/* project title */}
-        <div className='absolute z-[1] rounded-t-lg bg-white py-1 px-4 text-xs  font-medium text-gray-600'>
+        <div className='absolute z-[1] rounded-t-lg bg-white py-1 px-4 text-xs  font-medium text-main/70'>
           {type || "Project Type"}
         </div>
 
         {/* overlay buttons */}
-        <div className='absolute z-[0] flex h-full w-full items-center justify-center gap-12 bg-gray-200'>
+        <div className='absolute z-[0] flex h-full w-full items-center justify-center gap-12 bg-main/20'>
           {repoLink != undefined && (
             <Link href={repoLink}>
               <a
@@ -64,7 +64,7 @@ const Project = (props) => {
           )}
 
           {repoLink == undefined && liveLink == undefined && (
-            <p className='text-3xl font-thin text-gray-400'>Private Project</p>
+            <p className='text-3xl font-medium text-main/30'>Private Project</p>
           )}
         </div>
       </div>
@@ -79,14 +79,14 @@ const Project = (props) => {
           {skill?.map((skill) => (
             <p
               key={skill.id}
-              className='rounded-md bg-stone-100 py-1 px-2 text-xs text-gray-800'
+              className='rounded-md bg-main/10 py-1 px-2 text-xs text-main/90'
             >
               {skill.programming}
             </p>
           ))}
         </div>
         <h3 className='mt-1 text-lg font-medium'>{title || "Project Title"}</h3>
-        <p className='text-sm text-gray-400'>
+        <p className='text-sm text-main/60'>
           {description || "Project Description"}
         </p>
       </div>

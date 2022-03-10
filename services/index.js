@@ -33,7 +33,7 @@ export const getProjects = async () => {
     return results.projectsConnection.edges;
   } catch (err) {
     console.error(err.message);
-    return err.message;
+    return [];
   }
 };
 
@@ -57,7 +57,7 @@ export const getProjectTypes = async () => {
     return results.projectTypesConnection.edges;
   } catch (err) {
     console.error(err.message);
-    return err.message;
+    return [];
   }
 };
 
@@ -81,28 +81,33 @@ export const getSkills = async () => {
     return results.skillsConnection.edges;
   } catch (err) {
     console.error(err.message);
-    return err.message;
+    return [];
   }
 };
 
 export const getJourneys = async () => {
-  const query = gql`
-    {
-      journeysConnection(orderBy: createdAt_DESC) {
-        edges {
-          node {
-            id
-            title
-            description
-            startdate
-            enddate
+  try {
+    const query = gql`
+      {
+        journeysConnection(orderBy: createdAt_DESC) {
+          edges {
+            node {
+              id
+              title
+              description
+              startdate
+              enddate
+            }
           }
         }
       }
-    }
-  `;
+    `;
 
-  const results = await graphcms.request(query);
+    const results = await graphcms.request(query);
 
-  return results.journeysConnection.edges;
+    return results.journeysConnection.edges;
+  } catch (error) {
+    console.log(error.message);
+    return [];
+  }
 };

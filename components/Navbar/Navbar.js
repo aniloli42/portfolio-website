@@ -81,20 +81,20 @@ const Navbar = () => {
   return (
     <>
       {scroll ? (
-        <div className='fixed top-0 z-50 flex w-full items-center justify-between bg-gray-500 py-4 px-6'>
-          <h2 className='text-2xl font-black text-white'>Anil Oli</h2>
+        <div className='fixed top-0 z-50 flex w-full items-center justify-between bg-secondary py-4 px-6 shadow-md'>
+          <h2 className='text-2xl font-black text-main'>Anil Oli</h2>
           <div
             className='flex h-4 w-8 cursor-pointer flex-col gap-1 md:hidden'
             onClick={toggleNavActive}
           >
-            <span className='h-1 w-full bg-white'></span>
-            <span className='h-1 w-full bg-white'></span>
-            <span className='h-1 w-full bg-white'></span>
+            <span className='h-1 w-full bg-main'></span>
+            <span className='h-1 w-full bg-main'></span>
+            <span className='h-1 w-full bg-main'></span>
           </div>
           {activeNav && (
-            <nav className='fixed top-0 left-0 flex h-full w-full flex-col items-center gap-4 bg-dark-gray p-4 pt-12 md:static md:w-auto md:flex-row md:bg-transparent md:p-0'>
+            <nav className='fixed top-0 left-0 flex h-full w-full flex-col items-center gap-4 bg-secondary p-4 pt-12 md:static md:w-auto md:flex-row md:bg-transparent md:p-0'>
               <div
-                className='relative my-4 mb-12 flex h-[32px] w-8 cursor-pointer items-center justify-center before:absolute before:h-8 before:w-1 before:-rotate-45 before:bg-white before:[content:""] after:absolute after:h-8 after:w-1  after:rotate-45 after:bg-white after:[content:""] md:hidden'
+                className='relative my-4 mb-12 flex h-[32px] w-8 cursor-pointer items-center justify-center before:absolute before:h-8 before:w-1 before:-rotate-45 before:bg-main before:[content:""] after:absolute after:h-8 after:w-1  after:rotate-45 after:bg-main after:[content:""] md:hidden'
                 onClick={toggleNavActive}
               ></div>
               <NavLink

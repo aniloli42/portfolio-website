@@ -5,14 +5,12 @@ const DirectContact = ({ href, text, children }) => {
   return (
     <Link href={href}>
       <a
-        className='group flex items-center justify-center gap-2 rounded-full bg-white py-2 px-4 outline-none hover:bg-gray-800 focus-visible:bg-gray-800'
+        className='group flex items-center justify-center gap-2 rounded-full bg-main py-2 px-4 text-white outline-none transition-colors duration-200 ease-in-out hover:bg-main/90 focus-visible:bg-main/90'
         target={"_blank"}
         rel={"noreferrer nofollow"}
       >
         {children}
-        <span className='text-sm font-medium text-gray-700 group-hover:text-white group-focus-visible:text-white'>
-          {text}
-        </span>
+        <span className='text-sm font-medium text-white'>{text}</span>
       </a>
     </Link>
   );

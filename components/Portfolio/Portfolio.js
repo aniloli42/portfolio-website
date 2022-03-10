@@ -38,7 +38,7 @@ const Portfolio = ({ projects, projectType }) => {
       id='portfolio'
       className='mt-20 flex scroll-m-24 flex-col items-center py-4'
     >
-      <h2 className='mb-16 text-center text-3xl font-bold text-white underline underline-offset-4'>
+      <h2 className='mb-16 text-center text-3xl font-bold text-main underline underline-offset-4'>
         PORTFOLIO
       </h2>
 
@@ -61,7 +61,7 @@ const Portfolio = ({ projects, projectType }) => {
         ))}
 
         {filterProjects?.length === 0 && (
-          <p className='text-center text-lg font-thin text-gray-300'>
+          <p className='text-center text-lg font-thin text-main/80'>
             Sorry, Result not found. Project will be uploaded soon.
           </p>
         )}

@@ -5,8 +5,8 @@ export default async function message(req, res) {
     return res.json({ message: "Hi" });
   }
 
-  const { name, email, message } = req.body;
   try {
+    const { name, email, message } = req.body;
     const mailer = nodemailer.createTransport({
       service: "gmail",
       auth: {

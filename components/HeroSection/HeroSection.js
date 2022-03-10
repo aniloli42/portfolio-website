@@ -5,15 +5,15 @@ const HeroSection = () => {
   return (
     <section className='flex h-screen  flex-col items-center p-4'>
       <div className='flex h-full basis-[80%] flex-col items-center justify-center'>
-        <h1 className='mb-4 text-5xl font-black text-white md:text-7xl'>
+        <h1 className=' mb-4 text-5xl font-black text-main md:text-7xl'>
           ANIL OLI
         </h1>
-        <p className='text-sm text-light-white sm:text-base'>
+        <p className='text-sm text-main/70 sm:text-base'>
           POSITION: WEB DEVELOPER
         </p>
         <Link href={"#contact-me"}>
           <a
-            className='mt-20 w-full bg-dark-gray py-4 text-center text-base font-medium text-white outline-none focus-within:bg-dark-gray/60 hover:bg-dark-gray/60'
+            className='focus-visible:bg-dark-gray mt-20 w-full bg-main py-4 text-center text-base font-medium text-white outline-none hover:bg-main/90'
             tabIndex={1}
           >
             CONTACT ME
@@ -21,7 +21,7 @@ const HeroSection = () => {
         </Link>
         <Link href={"#skills"}>
           <a
-            className='mt-2 w-full bg-dark-gray py-4 text-center text-base font-medium text-white outline-none focus-within:bg-dark-gray/60 hover:bg-dark-gray/60'
+            className='mt-2 w-full bg-main py-4 text-center text-base font-medium text-white outline-none hover:bg-main/90 focus-visible:bg-main/90'
             tabIndex={1}
           >
             SKILLS
@@ -29,7 +29,7 @@ const HeroSection = () => {
         </Link>
         <Link href={"#portfolio"}>
           <a
-            className='mt-2 w-full bg-dark-gray py-4 text-center text-base font-medium text-white outline-none focus-within:bg-dark-gray/60 hover:bg-dark-gray/60'
+            className='mt-2 w-full bg-main py-4 text-center text-base font-medium text-white outline-none hover:bg-main/90 focus-visible:bg-main/90'
             tabIndex={1}
           >
             PORTFOLIO
@@ -51,7 +51,7 @@ const HeroSection = () => {
               viewBox='0 0 33 32'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
-              className='h-7 w-7 fill-gray-400 outline-none hover:fill-gray-300 group-focus-within:fill-gray-300'
+              className='h-7 w-7 fill-main/80 outline-none hover:fill-main/70 group-focus-visible:fill-main/70'
             >
               <path d='M10.9775 25.7664C10.9775 25.8987 10.8253 26.0046 10.6334 26.0046C10.4151 26.0244 10.2629 25.9185 10.2629 25.7664C10.2629 25.634 10.4151 25.5281 10.6069 25.5281C10.8055 25.5083 10.9775 25.6142 10.9775 25.7664ZM8.91963 25.4686C8.87331 25.6009 9.00565 25.7531 9.20416 25.7928C9.3762 25.859 9.57471 25.7928 9.61441 25.6605C9.65411 25.5281 9.52839 25.376 9.32988 25.3164C9.15784 25.2701 8.96595 25.3363 8.91963 25.4686ZM11.8443 25.3561C11.6524 25.4024 11.5201 25.5281 11.5399 25.6803C11.5598 25.8127 11.7318 25.8987 11.9303 25.8524C12.1222 25.8061 12.2546 25.6803 12.2347 25.548C12.2149 25.4223 12.0362 25.3363 11.8443 25.3561ZM16.1983 0C7.02057 0 0 6.96763 0 16.1453C0 23.4835 4.61862 29.763 11.2157 31.973C12.0627 32.1252 12.3604 31.6025 12.3604 31.1724C12.3604 30.7621 12.3406 28.4991 12.3406 27.1096C12.3406 27.1096 7.70873 28.1021 6.73604 25.1377C6.73604 25.1377 5.98171 23.2122 4.89653 22.7159C4.89653 22.7159 3.38125 21.6771 5.0024 21.6969C5.0024 21.6969 6.65002 21.8293 7.55654 23.4041C9.00565 25.9582 11.4341 25.2238 12.3803 24.787C12.5325 23.7283 12.9626 22.9939 13.439 22.5571C9.74013 22.1469 6.00818 21.6109 6.00818 15.2454C6.00818 13.4258 6.51107 12.5126 7.56978 11.348C7.39774 10.9179 6.8353 9.14461 7.74182 6.85515C9.12476 6.42505 12.3075 8.64172 12.3075 8.64172C13.6309 8.27117 15.0535 8.07928 16.4629 8.07928C17.8723 8.07928 19.295 8.27117 20.6184 8.64172C20.6184 8.64172 23.8011 6.41843 25.1841 6.85515C26.0906 9.15122 25.5281 10.9179 25.3561 11.348C26.4148 12.5192 27.0633 13.4324 27.0633 15.2454C27.0633 21.6308 23.1659 22.1403 19.467 22.5571C20.0758 23.0799 20.5919 24.0724 20.5919 25.6274C20.5919 27.8573 20.5721 30.6166 20.5721 31.1592C20.5721 31.5893 20.8764 32.112 21.7168 31.9598C28.3337 29.763 32.82 23.4835 32.82 16.1453C32.82 6.96763 25.376 0 16.1983 0ZM6.43166 22.8218C6.34564 22.888 6.36549 23.0402 6.47798 23.1659C6.58385 23.2718 6.73604 23.3181 6.82206 23.2321C6.90808 23.1659 6.88823 23.0137 6.77574 22.888C6.66987 22.7821 6.51768 22.7358 6.43166 22.8218ZM5.71703 22.2858C5.67071 22.3719 5.73688 22.4777 5.86922 22.5439C5.97509 22.6101 6.10743 22.5902 6.15375 22.4976C6.20007 22.4116 6.1339 22.3057 6.00156 22.2395C5.86922 22.1998 5.76335 22.2197 5.71703 22.2858ZM7.86092 24.6415C7.75505 24.7275 7.79475 24.926 7.94694 25.0517C8.09913 25.2039 8.29102 25.2238 8.37704 25.1179C8.46306 25.0319 8.42336 24.8334 8.29102 24.7076C8.14545 24.5555 7.94694 24.5356 7.86092 24.6415ZM7.10659 23.6688C7.00072 23.735 7.00072 23.907 7.10659 24.0592C7.21246 24.2114 7.39112 24.2775 7.47714 24.2114C7.58301 24.1254 7.58301 23.9533 7.47714 23.8011C7.3845 23.6489 7.21246 23.5828 7.10659 23.6688Z' />
             </svg>
@@ -71,7 +71,7 @@ const HeroSection = () => {
               height='32'
               viewBox='0 0 34 32'
               fill='none'
-              className='h-7 w-7 fill-gray-400 outline-none hover:fill-gray-300 group-focus-within:fill-gray-300'
+              className='h-7 w-7 fill-main/80 outline-none hover:fill-main/70 group-focus-visible:fill-main/70'
               xmlns='http://www.w3.org/2000/svg'
             >
               <path d='M33.0148 16.0974C33.0148 7.20487 25.8099 0 16.9174 0C8.02494 0 0.820068 7.20487 0.820068 16.0974C0.820068 24.1318 6.70664 30.7914 14.4022 32V20.7507H10.313V16.0974H14.4022V12.5507C14.4022 8.51667 16.8038 6.28836 20.4822 6.28836C22.2438 6.28836 24.086 6.60252 24.086 6.60252V10.5619H22.0556C20.0564 10.5619 19.4326 11.803 19.4326 13.0759V16.0974H23.8971L23.1831 20.7507H19.4326V32C27.1282 30.7914 33.0148 24.1318 33.0148 16.0974Z' />
@@ -92,7 +92,7 @@ const HeroSection = () => {
               height='32'
               viewBox='0 0 33 32'
               fill='none'
-              className='h-7 w-7 fill-gray-400 outline-none hover:fill-gray-300 group-focus-within:fill-gray-300'
+              className='h-7 w-7 fill-main/80 outline-none hover:fill-main/70 group-focus-visible:fill-main/70'
               xmlns='http://www.w3.org/2000/svg'
             >
               <path d='M29.7289 0H2.29322C1.03608 0 0.0146484 1.03571 0.0146484 2.30714V29.6929C0.0146484 30.9643 1.03608 32 2.29322 32H29.7289C30.9861 32 32.0146 30.9643 32.0146 29.6929V2.30714C32.0146 1.03571 30.9861 0 29.7289 0ZM9.68608 27.4286H4.94322V12.1571H9.69322V27.4286H9.68608ZM7.31465 10.0714C5.79322 10.0714 4.56465 8.83571 4.56465 7.32143C4.56465 5.80714 5.79322 4.57143 7.31465 4.57143C8.82893 4.57143 10.0646 5.80714 10.0646 7.32143C10.0646 8.84286 8.83608 10.0714 7.31465 10.0714ZM27.4646 27.4286H22.7218V20C22.7218 18.2286 22.6861 15.95 20.2575 15.95C17.7861 15.95 17.4075 17.8786 17.4075 19.8714V27.4286H12.6646V12.1571H17.2146V14.2429H17.2789C17.9146 13.0429 19.4646 11.7786 21.7718 11.7786C26.5718 11.7786 27.4646 14.9429 27.4646 19.0571V27.4286Z' />
