@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className='my-auto flex  h-screen min-h-screen flex-col items-center p-4'>
+    <section className='flex min-h-screen flex-col items-center p-4'>
       <div className='my-16 flex flex-col'>
         <h1 className='mb-4 text-5xl font-black text-main md:text-7xl'>
           ANIL OLI
