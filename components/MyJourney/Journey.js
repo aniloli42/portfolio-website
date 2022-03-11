@@ -8,8 +8,8 @@ const Journey = ({ startdate, enddate, title, description }) => {
               startdate && enddate
                 ? `${startdate} - ${enddate}`
                 : startdate
-                ? `${startdate}`
-                : `${enddate}`
+                ? `From ${startdate}`
+                : `End ${enddate}`
             }`}
           </p>
         </div>

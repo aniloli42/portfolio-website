@@ -24,13 +24,14 @@ export const getStaticProps = async () => {
   const projects = await getProjects();
 
   return {
-    props: { journeys, projects, projectType, skills }
+    props: { journeys, projects, projectType, skills },
+    revalidate: 30
   };
 };
 
 const index = ({ journeys, projects, projectType, skills }) => {
   return (
-    <div className='overflow-x-hidden scroll-smooth bg-dark-blue'>
+    <div className='bg-dark-blue overflow-x-hidden scroll-smooth'>
       {/* For SEO Purposes */}
       <Head>
         <title>Anil Oli | Portfolio</title>

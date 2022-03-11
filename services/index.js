@@ -89,14 +89,14 @@ export const getJourneys = async () => {
   try {
     const query = gql`
       {
-        journeysConnection(orderBy: createdAt_DESC) {
+        journeysConnection(orderBy: startdate_DESC) {
           edges {
             node {
               id
               title
-              description
               startdate
               enddate
+              description
             }
           }
         }
