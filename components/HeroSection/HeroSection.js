@@ -3,12 +3,12 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className='flex h-screen  flex-col items-center p-4'>
-      <div className='flex h-full basis-[80%] flex-col items-center justify-center'>
-        <h1 className=' mb-4 text-5xl font-black text-main md:text-7xl'>
+    <section className='my-auto flex  h-screen min-h-screen flex-col items-center p-4'>
+      <div className='my-16 flex flex-col'>
+        <h1 className='mb-4 text-5xl font-black text-main md:text-7xl'>
           ANIL OLI
         </h1>
-        <p className='text-sm text-main/70 sm:text-base'>
+        <p className='text-center text-sm text-main/70 sm:text-base'>
           POSITION: WEB DEVELOPER
         </p>
         <Link href={"#contact-me"}>
@@ -36,7 +36,7 @@ const HeroSection = () => {
           </a>
         </Link>
       </div>
-      <div className='mb-6 flex items-center gap-10 outline-none'>
+      <div className='my-6 flex items-center gap-10 outline-none'>
         {/* Github */}
         <Link href='https://github.com/aniloli42'>
           <a

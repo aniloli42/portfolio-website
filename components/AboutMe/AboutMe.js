@@ -16,7 +16,7 @@ const AboutMe = () => {
             src={require("../../public/assets/anil.jpg")}
             alt='photo of Anil Oli'
             layout='intrinsic'
-            className='w-12 rounded-3xl'
+            className='w-12 rounded-3xl bg-main/20'
           />
         </div>
 
