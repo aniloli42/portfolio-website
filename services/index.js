@@ -65,7 +65,7 @@ export const getSkills = async () => {
   try {
     const query = gql`
       {
-        skillsConnection {
+        skillsConnection(where: { feature: true }) {
           edges {
             node {
               programming

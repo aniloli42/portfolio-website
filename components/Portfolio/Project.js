@@ -11,7 +11,7 @@ const Project = (props) => {
   } = props;
 
   return (
-    <div className='min-h-xl max-w-xs shrink-0 rounded-lg bg-white p-4 shadow-md'>
+    <div className='min-h-xl portfolio-shadow max-w-xs shrink-0 rounded-lg bg-white p-4'>
       {/* showcase */}
       <div className='relative flex min-h-[150px] min-w-[200px] items-end justify-center overflow-hidden rounded-lg bg-transparent'>
         {/* project title */}

@@ -5,3 +5,9 @@
 body {
   scroll-behavior: smooth;
 }
+
+@layer components {
+  .portfolio-shadow {
+    @apply shadow-[0rem_0.1rem_.2rem_0.05rem] shadow-main/20;
+  }
+}
