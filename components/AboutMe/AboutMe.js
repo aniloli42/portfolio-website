@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image'
+import React from 'react'
 
 const AboutMe = () => {
   return (
@@ -13,7 +13,7 @@ const AboutMe = () => {
         </h2>
         <div className='w-44 lg:w-auto lg:[grid-column:1/2] lg:[grid-row:1/3]'>
           <Image
-            src={require("../../public/assets/anil.jpg")}
+            src={require('../../public/assets/anil.jpg')}
             alt='photo of Anil Oli'
             layout='intrinsic'
             className='w-12 rounded-3xl bg-main/20'
@@ -21,12 +21,12 @@ const AboutMe = () => {
         </div>
 
         <p className='mt-4 max-w-xs text-center text-base text-main/80 sm:max-w-md sm:text-xl lg:-mt-36 lg:text-left'>
-          I am Anil Oli from Dang, Nepal. I am pursing the web development
+          I am Anil Oli from Dang, Nepal. I am pursing the software development
           journey. Aim to learn and capable to solve different problems.
         </p>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutMe;
+export default AboutMe

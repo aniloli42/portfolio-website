@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link'
+import React from 'react'
 
 const HeroSection = () => {
   return (
@@ -9,9 +9,9 @@ const HeroSection = () => {
           ANIL OLI
         </h1>
         <p className='text-center text-sm text-main/70 sm:text-base'>
-          POSITION: WEB DEVELOPER
+          POSITION: SOFTWARE DEVELOPER
         </p>
-        <Link href={"#contact-me"}>
+        <Link href={'#contact-me'}>
           <a
             className='focus-visible:bg-dark-gray mt-20 w-full bg-main py-4 text-center text-base font-medium text-white outline-none hover:bg-main/90'
             tabIndex={1}
@@ -19,7 +19,7 @@ const HeroSection = () => {
             CONTACT ME
           </a>
         </Link>
-        <Link href={"#skills"}>
+        <Link href={'#skills'}>
           <a
             className='mt-2 w-full bg-main py-4 text-center text-base font-medium text-white outline-none hover:bg-main/90 focus-visible:bg-main/90'
             tabIndex={1}
@@ -27,7 +27,7 @@ const HeroSection = () => {
             SKILLS
           </a>
         </Link>
-        <Link href={"#portfolio"}>
+        <Link href={'#portfolio'}>
           <a
             className='mt-2 w-full bg-main py-4 text-center text-base font-medium text-white outline-none hover:bg-main/90 focus-visible:bg-main/90'
             tabIndex={1}
@@ -40,8 +40,8 @@ const HeroSection = () => {
         {/* Github */}
         <Link href='https://github.com/aniloli42'>
           <a
-            target={"_blank"}
-            rel={"nofollow"}
+            target={'_blank'}
+            rel={'nofollow'}
             className='group outline-none'
             tabIndex={2}
           >
@@ -61,8 +61,8 @@ const HeroSection = () => {
         {/* Facebook */}
         <Link href='https://facebook.com/anil.oli.4321'>
           <a
-            target={"_blank"}
-            rel={"nofollow"}
+            target={'_blank'}
+            rel={'nofollow'}
             className='group outline-none'
             tabIndex={2}
           >
@@ -82,8 +82,8 @@ const HeroSection = () => {
         {/* Linkedin */}
         <Link href='https://linkedin.com/in/aniloli'>
           <a
-            target={"_blank"}
-            rel={"nofollow"}
+            target={'_blank'}
+            rel={'nofollow'}
             className='group outline-none'
             tabIndex={2}
           >
@@ -101,7 +101,7 @@ const HeroSection = () => {
         </Link>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

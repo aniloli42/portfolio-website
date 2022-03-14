@@ -1,5 +1,5 @@
-import Head from "next/head";
-import React from "react";
+import Head from 'next/head'
+import React from 'react'
 import {
   AboutMe,
   ContactMe,
@@ -9,33 +9,53 @@ import {
   Navbar,
   Portfolio,
   Skills
-} from "../components";
+} from '../components'
 import {
   getJourneys,
   getProjects,
   getProjectTypes,
   getSkills
-} from "../services";
+} from '../services'
 
 export const getStaticProps = async () => {
-  const journeys = await getJourneys();
-  const skills = await getSkills();
-  const projectType = await getProjectTypes();
-  const projects = await getProjects();
+  const journeys = await getJourneys()
+  const skills = await getSkills()
+  const projectType = await getProjectTypes()
+  const projects = await getProjects()
 
   return {
     props: { journeys, projects, projectType, skills },
     revalidate: 30
-  };
-};
+  }
+}
 
 const index = ({ journeys, projects, projectType, skills }) => {
   return (
     <div className='bg-dark-blue overflow-x-hidden scroll-smooth'>
       {/* For SEO Purposes */}
       <Head>
-        <title>Anil Oli | Portfolio</title>
-        <link rel='icon' href='../assets/anil.jpg' />
+        <title>Anil Oli | Portfolio Website</title>
+        <link rel='icon' href='assets/anil.jpg' />
+        <meta
+          name='description'
+          content='Anil Oli is the Software Developer, follows javascript &amp; its libraries. Also learning mobile development in React Native nowadays.'
+        />
+        <meta
+          name='keywords'
+          content='Anil Oli, aniloli42, Web Developer, Javascript Developer, Node Js Developer'
+        />
+
+        {/* Open Graph Setup */}
+        <meta property='og:url' content='https://aniloli42.me' />
+        <meta property='og:title' content='Anil Oli | Portfolio Website' />
+        <meta
+          property='og:description'
+          content='Anil Oli is the Software Developer, follows javascript &amp; its libraries. Also learning mobile development in React Native nowadays.'
+        />
+        <meta property='og:type' content='profile' />
+        <meta property='og:image:width' content='900' />
+        <meta property='og:image:height' content='600' />
+        <meta property='og:image' content='assets/anil_og.png' />
       </Head>
       <header>
         <Navbar />
@@ -52,7 +72,7 @@ const index = ({ journeys, projects, projectType, skills }) => {
         <Footer />
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default index;
+export default index
