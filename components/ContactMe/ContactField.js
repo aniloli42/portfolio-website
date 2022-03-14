@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const ContactField = ({
   fieldName,
@@ -13,7 +13,7 @@ const ContactField = ({
       <label htmlFor={id} className=' text-base text-main/70'>
         {fieldName}
       </label>
-      {type !== "textarea" ? (
+      {type !== 'textarea' ? (
         <input
           type={type}
           id={id}
@@ -21,7 +21,7 @@ const ContactField = ({
           value={formData[id]}
           onChange={handleInputChange}
           placeholder={placeholder}
-          className='mt-1 border-b-2 border-b-gray-800 bg-main/10 p-1 px-2 text-main outline-none placeholder:text-sm placeholder:text-main/70'
+          className='mt-1 border-b-2 border-b-gray-800 bg-main/5 p-1 px-2 text-main outline-none placeholder:text-sm placeholder:text-main/70'
         />
       ) : (
         <textarea
@@ -30,11 +30,11 @@ const ContactField = ({
           rows={4}
           value={formData[id]}
           onChange={handleInputChange}
-          className='mt-1 resize-none border-b-2 border-b-gray-800 bg-main/10 p-1 px-2 text-main outline-none placeholder:text-sm placeholder:text-main/70'
+          className='mt-1 min-h-[100px] border-b-2 border-b-gray-800 bg-main/5 p-1 px-2 text-main outline-none placeholder:text-sm placeholder:text-main/70'
         ></textarea>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ContactField;
+export default ContactField
