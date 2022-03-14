@@ -1,14 +1,14 @@
-import React from "react";
-import Journey from "./Journey";
+import React from 'react'
+import Journey from './Journey'
 
 const datas = [
   {
-    start: "2018",
-    end: "2020",
-    title: "DCOM",
-    description: "Hello World"
+    start: '2018',
+    end: '2020',
+    title: 'DCOM',
+    description: 'Hello World'
   }
-];
+]
 
 const MyJourney = ({ journeys }) => {
   return (
@@ -27,7 +27,7 @@ const MyJourney = ({ journeys }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default MyJourney;
+export default MyJourney

@@ -1,7 +1,7 @@
-import { GraphQLClient, gql } from "graphql-request";
+import { GraphQLClient, gql } from 'graphql-request'
 
-const GRAPHQL_API = process.env.NEXT_PUBLIC_GRAPHCMS_API_ENDPOINT;
-const graphcms = new GraphQLClient(GRAPHQL_API);
+const GRAPHQL_API = process.env.NEXT_PUBLIC_GRAPHCMS_API_ENDPOINT
+const graphcms = new GraphQLClient(GRAPHQL_API)
 
 export const getProjects = async () => {
   try {
@@ -26,16 +26,16 @@ export const getProjects = async () => {
           }
         }
       }
-    `;
+    `
 
-    const results = await graphcms.request(query);
+    const results = await graphcms.request(query)
 
-    return results.projectsConnection.edges;
+    return results.projectsConnection.edges
   } catch (err) {
-    console.error(err.message);
-    return [];
+    console.error(err.message)
+    return []
   }
-};
+}
 
 export const getProjectTypes = async () => {
   try {
@@ -50,16 +50,16 @@ export const getProjectTypes = async () => {
           }
         }
       }
-    `;
+    `
 
-    const results = await graphcms.request(query);
+    const results = await graphcms.request(query)
 
-    return results.projectTypesConnection.edges;
+    return results.projectTypesConnection.edges
   } catch (err) {
-    console.error(err.message);
-    return [];
+    console.error(err.message)
+    return []
   }
-};
+}
 
 export const getSkills = async () => {
   try {
@@ -74,16 +74,16 @@ export const getSkills = async () => {
           }
         }
       }
-    `;
+    `
 
-    const results = await graphcms.request(query);
+    const results = await graphcms.request(query)
 
-    return results.skillsConnection.edges;
+    return results.skillsConnection.edges
   } catch (err) {
-    console.error(err.message);
-    return [];
+    console.error(err.message)
+    return []
   }
-};
+}
 
 export const getJourneys = async () => {
   try {
@@ -95,19 +95,21 @@ export const getJourneys = async () => {
               id
               title
               startdate
+              startmonth
               enddate
+              endmonth
               description
             }
           }
         }
       }
-    `;
+    `
 
-    const results = await graphcms.request(query);
+    const results = await graphcms.request(query)
 
-    return results.journeysConnection.edges;
+    return results.journeysConnection.edges
   } catch (error) {
-    console.log(error.message);
-    return [];
+    console.log(error.message)
+    return []
   }
-};
+}
