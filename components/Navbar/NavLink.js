@@ -6,9 +6,8 @@ const NavLink = ({ href, text, active, toggleNavActive }) => {
     <Link href={href} replace>
       <a
         className={`text-xl font-medium outline-none transition duration-150 ease-out hover:text-main focus-visible:text-main md:text-sm
-        ${active === href ? "text-main" : "text-main/50"}
+        ${active === href ? "text-main" : "text-main/70"}
         `}
-        tabIndex={3}
         onClick={toggleNavActive}
       >
         {text}
