@@ -1,9 +1,9 @@
-import nodemailer from 'nodemailer'
-import { google } from 'googleapis'
+import nodemailer from "nodemailer";
+import { google } from "googleapis";
 
 export default async function message(req, res) {
-  if (req.method !== 'POST') {
-    return res.json({ message: 'Hi' })
+  if (req.method !== "POST") {
+    return res.json({ message: "Hi" });
   }
 
   const {
@@ -11,54 +11,59 @@ export default async function message(req, res) {
     GMAIL_CLIENT_ID,
     GMAIL_CLIENT_SECRET,
     EMAIL_REFRESH_TOKEN,
-    GMAIL_REDIRECT_URI
-  } = process.env
+    GMAIL_REDIRECT_URI,
+  } = process.env;
 
   const OAuth2Client = new google.auth.OAuth2(
     GMAIL_CLIENT_ID,
     GMAIL_CLIENT_SECRET,
     GMAIL_REDIRECT_URI
-  )
+  );
 
   OAuth2Client.setCredentials({
-    refresh_token: EMAIL_REFRESH_TOKEN
-  })
+    refresh_token: EMAIL_REFRESH_TOKEN,
+  });
 
   try {
-    const accessToken = await OAuth2Client.getAccessToken()
+    const accessToken = await OAuth2Client.getAccessToken();
 
     if (!accessToken)
-      throw new Error('Problem in server, Mail At: aniloli42@gmail.com')
+      throw new Error("Problem in server, Mail At: aniloli42@gmail.com");
 
-    const { name, email, message } = req.body
+    const { name, email, message } = req.body;
 
     const mailer = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
-        type: 'OAuth2',
+        type: "OAuth2",
         user: USER_EMAIL,
         clientId: GMAIL_CLIENT_ID,
         clientSecret: GMAIL_CLIENT_SECRET,
         refreshToken: EMAIL_REFRESH_TOKEN,
-        accessToken
-      }
-    })
+        accessToken,
+      },
+    });
 
     const mailOptions = {
       from: process.env.username,
-      to: 'aniloli42@gmail.com',
+      to: "aniloli42@gmail.com",
       subject: `Mail By ${name}`,
       text: `
       Name: ${name}
       Email: ${email}
       Message: ${message}
-      `
-    }
+      `,
+    };
 
-    await mailer.sendMail(mailOptions)
+    await mailer.sendMail(mailOptions);
 
-    res.status(200).json({ message: 'Successfully Sent' })
+    res.status(200).json({ message: "Successfully Sent" });
   } catch (error) {
-    res.status(500).json({ message: error.message })
+    console.error(error.message);
+    res
+      .status(500)
+      .json({
+        message: "Oops! Something Went Wrong. Mail on aniloli42@gmail.com",
+      });
   }
 }

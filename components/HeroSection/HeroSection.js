@@ -5,11 +5,11 @@ const HeroSection = () => {
   return (
     <section className="flex min-h-screen flex-col items-center p-4">
       <div className="my-16 flex flex-col">
-        <h1 className="mb-4 text-5xl font-black text-main md:text-7xl">
+        <h1 className="mb-4 text-5xl text-center font-black text-main md:text-7xl">
           ANIL OLI
         </h1>
         <p className="text-center text-sm text-main/70 sm:text-base">
-          POSITION: SOFTWARE DEVELOPER
+          POSITION: MERN STACK DEVELOPER
         </p>
         <Link href={"#contact-me"}>
           <a className="mt-20 w-full bg-main py-4 text-center text-base font-medium text-white outline-none hover:bg-main/90 focus-visible:bg-main/90">
