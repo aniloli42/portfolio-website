@@ -7,7 +7,7 @@ html {
 }
 
 @layer components {
-  .portfolio-shadow {
-    @apply shadow-[0rem_0.1rem_.2rem_0.05rem] shadow-main/20;
+  .custom-shadow {
+    @apply shadow-[-1px_-1px_2px,2px_2px_2px] shadow-main/20;
   }
 }
