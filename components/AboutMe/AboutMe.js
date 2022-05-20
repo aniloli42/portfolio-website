@@ -35,7 +35,7 @@ const AboutMe = ({ resumeLink: CVLink }) => {
               className="py-2 px-4 bg-main h-fit rounded-md text-white font-bold hover:ring-2 hover:ring-main/40 block my-4 row-[3/4] lg:row-auto hover:bg-main/90"
               rel="nofollow"
             >
-              Download CV
+              Download RESUME
             </a>
           </Link>
         )}
