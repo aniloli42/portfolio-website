@@ -35,14 +35,14 @@ const Portfolio = ({ projects, projectType }) => {
 
   return (
     <section
-      id='portfolio'
-      className='mt-20 flex scroll-m-24 flex-col items-center py-4'
+      id="portfolio"
+      className="mt-20 flex scroll-m-24 flex-col items-center py-4"
     >
-      <h2 className='mb-16 text-center text-3xl font-bold text-main underline underline-offset-4'>
+      <h2 className="mb-16 text-center text-3xl font-bold text-main underline underline-offset-4">
         PORTFOLIO
       </h2>
 
-      <div className='flex max-w-xs justify-start gap-4 overflow-x-auto px-8 pb-4 md:max-w-none md:flex-wrap md:justify-center'>
+      <div className="flex max-w-xs justify-start gap-4 overflow-x-auto md:px-8 pb-4 md:max-w-none md:flex-wrap md:justify-center">
         {projectType?.map((type) => {
           return (
             <PortfolioType
@@ -55,13 +55,13 @@ const Portfolio = ({ projects, projectType }) => {
         })}
       </div>
 
-      <div className='my-4 flex max-w-7xl flex-col flex-wrap justify-center gap-4 md:flex-row'>
+      <div className="my-4 flex max-w-7xl flex-col flex-wrap justify-center gap-4 md:flex-row">
         {filterProjects?.map((project) => (
           <Project key={project.node.id} {...project.node} />
         ))}
 
         {filterProjects?.length === 0 && (
-          <p className='text-center text-lg font-thin text-main/80'>
+          <p className="text-center text-lg font-thin text-main/80">
             Sorry, Result not found. Project will be uploaded soon.
           </p>
         )}
