@@ -6,6 +6,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+button,
+a {
+	@apply select-none;
+}
+
 @layer components {
 	.custom-shadow {
 		@apply shadow-[-1px_-1px_2px,2px_2px_2px] shadow-main/20;
