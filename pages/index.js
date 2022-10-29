@@ -31,7 +31,7 @@ export const getStaticProps = async () => {
 	}
 }
 
-const index = ({ journeys, projects, projectType, skills, resumeLink }) => {
+const Home = ({ journeys, projects, projectType, skills, resumeLink }) => {
 	return (
 		<div className='bg-dark-blue overflow-x-hidden scroll-smooth'>
 			{/* For SEO Purposes */}
@@ -58,7 +58,7 @@ const index = ({ journeys, projects, projectType, skills, resumeLink }) => {
 				<meta property='og:image:width' content='900' />
 				<meta property='og:image:height' content='600' />
 				<meta property='og:image' content='anil_og.jpg' />
-				<meta name='color-scheme' content='dark light' />
+				{/* <meta name='color-scheme' content='dark light' /> */}
 			</Head>
 			<header>
 				<Navbar />
@@ -76,4 +76,4 @@ const index = ({ journeys, projects, projectType, skills, resumeLink }) => {
 	)
 }
 
-export default index
+export default Home

@@ -79,7 +79,7 @@ const Navbar = () => {
 					<span className='h-1 w-full bg-main dark:bg-secondary/90'></span>
 				</div>
 				{activeNav && (
-					<nav className='fixed top-0 left-0 flex h-full w-full flex-col items-center gap-4 bg-secondary dark:bg-zinc-900 p-4 pt-12 md:static md:w-auto md:flex-row md:bg-transparent md:p-0'>
+					<nav className='fixed top-0 left-0 flex h-full w-full flex-col items-center gap-4 bg-secondary dark:bg-zinc-900 p-4 pt-12 md:static md:w-auto md:flex-row md:bg-transparent dark:md:bg-transparent md:p-0'>
 						<div
 							className='relative my-4 mb-12 flex h-[32px] w-8 cursor-pointer items-center justify-center before:absolute before:h-8 before:w-1 before:-rotate-45 before:bg-main dark:before:bg-secondary/70 before:[content:""] after:absolute after:h-8 after:w-1  after:rotate-45 after:bg-main dark:after:bg-secondary/70 after:[content:""] md:hidden'
 							onClick={toggleNavActive}></div>
