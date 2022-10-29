@@ -37,7 +37,7 @@ const Portfolio = ({ projects, projectType }) => {
 		<section
 			id='portfolio'
 			className=' flex scroll-m-24 flex-col items-center py-16'>
-			<h2 className='mb-16 text-center text-3xl font-bold text-main underline underline-offset-4'>
+			<h2 className='mb-16 text-center text-3xl font-bold text-main underline underline-offset-4 dark:text-secondary/90'>
 				PORTFOLIO
 			</h2>
 
@@ -60,7 +60,7 @@ const Portfolio = ({ projects, projectType }) => {
 				))}
 
 				{filterProjects?.length === 0 && (
-					<p className='text-center text-lg font-thin text-main/80'>
+					<p className='text-center text-lg font-thin text-main/80 dark:text-secondary/80'>
 						Sorry, Result not found. Project will be uploaded soon.
 					</p>
 				)}

@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 @layer components {
-  .custom-shadow {
-    @apply shadow-[-1px_-1px_2px,2px_2px_2px] shadow-main/20;
-  }
+	.custom-shadow {
+		@apply shadow-[-1px_-1px_2px,2px_2px_2px] shadow-main/20;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		@apply bg-zinc-900;
+	}
 }

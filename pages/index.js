@@ -58,6 +58,7 @@ const index = ({ journeys, projects, projectType, skills, resumeLink }) => {
 				<meta property='og:image:width' content='900' />
 				<meta property='og:image:height' content='600' />
 				<meta property='og:image' content='anil_og.jpg' />
+				<meta name='color-scheme' content='dark light' />
 			</Head>
 			<header>
 				<Navbar />
