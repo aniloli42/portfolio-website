@@ -5,7 +5,7 @@ import React from 'react'
 const AboutMe = ({ resumeLink }) => {
 	return (
 		<section
-			className='mt-20 flex w-full shrink-0 scroll-m-24 items-center justify-center p-4'
+			className='flex w-full shrink-0 scroll-m-24 items-center justify-center p-4'
 			id='about-me'>
 			<div className='grid justify-items-center lg:[grid-template-rows:2em_minmax(3em,8em)_auto] lg:[grid-template-columns:max-content_auto] lg:justify-items-start lg:gap-x-8 lg:gap-y-6'>
 				<h2 className='mb-8 text-3xl font-bold text-main underline underline-offset-4 lg:mb-0'>
