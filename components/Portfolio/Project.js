@@ -69,7 +69,9 @@ const Project = props => {
 						</p>
 					))}
 				</div>
-				<h3 className='mt-1 text-lg font-medium'>{title || 'Project Title'}</h3>
+				<h3 className='mt-1 text-lg font-medium dark:text-secondary/90'>
+					{title || 'Project Title'}
+				</h3>
 				<p className='text-sm text-main/80 dark:text-secondary/40'>
 					{description || 'Project Description'}
 				</p>
