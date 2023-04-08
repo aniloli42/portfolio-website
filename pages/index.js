@@ -5,7 +5,7 @@ import {
   ContactMe,
   HeroSection,
   MyJourney,
-  Navbar,
+  Header,
   Portfolio,
   Skills,
 } from '../components'
@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
 
 const Home = ({ journeys, projects, projectType, skills, resumeLink }) => {
   return (
-    <div className='bg-dark-blue overflow-x-hidden scroll-smooth'>
+    <>
       {/* For SEO Purposes */}
       <Head>
         <title>Anil Oli | Portfolio Website</title>
@@ -58,10 +58,10 @@ const Home = ({ journeys, projects, projectType, skills, resumeLink }) => {
         <meta property='og:image:height' content='600' />
         <meta property='og:image' content='anil_og.jpg' />
       </Head>
-      <header>
-        <Navbar />
-      </header>
-      <main className='flex flex-col'>
+
+      <Header />
+
+      <main className='flex flex-col overflow-x-hidden bg-dark-blue scroll-smooth'>
         <HeroSection />
         <AboutMe resumeLink={resumeLink} />
         <MyJourney journeys={journeys} />
@@ -69,7 +69,7 @@ const Home = ({ journeys, projects, projectType, skills, resumeLink }) => {
         <Portfolio projects={projects} projectType={projectType} />
         <ContactMe />
       </main>
-    </div>
+    </>
   )
 }
 
