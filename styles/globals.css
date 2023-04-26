@@ -34,12 +34,10 @@ a {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    @apply bg-zinc-900;
-  }
+html.dark {
+  @apply bg-zinc-900;
+}
 
-  ::-webkit-scrollbar-track {
-    background-color: #110;
-  }
+html.dark ::-webkit-scrollbar-track {
+  background-color: #110;
 }

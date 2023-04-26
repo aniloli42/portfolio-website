@@ -12,7 +12,7 @@ const Project = (props) => {
   } = props
 
   return (
-    <div className='min-h-xl custom-shadow max-w-xs shrink-0 rounded-lg bg-white dark:bg-zinc-700 p-4'>
+    <div className='p-4 max-w-xs bg-white rounded-lg min-h-xl custom-shadow shrink-0 dark:bg-zinc-700'>
       {/* showcase */}
       <div className='relative flex min-h-[150px] min-w-[200px] items-end justify-center overflow-hidden rounded-md bg-transparent'>
         {/* project title */}
@@ -25,7 +25,7 @@ const Project = (props) => {
           {repoLink != undefined && (
             <Link href={repoLink}>
               <a
-                className='group flex h-max w-max items-center justify-center rounded-full bg-white/70 dark:bg-white/80 p-2 outline-none hover:bg-white/90 focus-visible:bg-white text-main text-xl'
+                className='flex justify-center items-center p-2 w-max text-xl rounded-full outline-none group h-max bg-white/70 dark:bg-white/80 hover:bg-white/90 focus-visible:bg-white text-main'
                 target={'_blank'}
                 rel={'nofollow noreferrer'}
                 aria-label='Github Project Repository Link'
@@ -38,7 +38,7 @@ const Project = (props) => {
           {liveLink != undefined && (
             <Link href={liveLink}>
               <a
-                className='group flex h-max w-max items-center justify-center rounded-full bg-white/70 dark:bg-white/80 p-2 outline-none hover:bg-white/90 focus-visible:bg-white text-main text-xl'
+                className='flex justify-center items-center p-2 w-max text-xl rounded-full outline-none group h-max bg-white/70 dark:bg-white/80 hover:bg-white/90 focus-visible:bg-white text-main'
                 target={'_blank'}
                 rel={'nofollow noreferrer'}
                 aria-label='Project Live Link'
@@ -49,7 +49,7 @@ const Project = (props) => {
           )}
 
           {repoLink == undefined && liveLink == undefined && (
-            <p className='text-3xl font-medium text-main/30 dark:text-secondary/40'>
+            <p className='text-3xl font-medium text-main/60 dark:text-secondary/60'>
               Private Project
             </p>
           )}
@@ -60,13 +60,13 @@ const Project = (props) => {
        * title
        * description
        */}
-      <div className='mt-2 flex flex-col'>
+      <div className='flex flex-col mt-2'>
         {/* project tool */}
-        <div className='flex flex-wrap justify-center gap-2'>
+        <div className='flex flex-wrap gap-2 justify-center'>
           {skill?.map((skill) => (
             <p
               key={skill.id}
-              className='rounded-sm bg-main/10 py-1 px-2 text-xs text-main/90 dark:text-secondary/80 dark:bg-zinc-600'
+              className='px-2 py-1 text-xs rounded-sm bg-main/10 text-main/90 dark:text-secondary/80 dark:bg-zinc-600'
             >
               {skill.programming}
             </p>
@@ -75,7 +75,7 @@ const Project = (props) => {
         <h3 className='mt-1 text-lg font-medium dark:text-secondary/90'>
           {title || 'Project Title'}
         </h3>
-        <p className='text-sm text-main/80 dark:text-secondary/40'>
+        <p className='text-sm text-main/80 dark:text-secondary/60'>
           {description || 'Project Description'}
         </p>
       </div>

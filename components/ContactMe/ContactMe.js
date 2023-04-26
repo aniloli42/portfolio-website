@@ -4,22 +4,22 @@ import DirectContact from './DirectContact'
 
 const ContactMe = () => {
 	return (
-		<section id='contact-me' className='my-5 scroll-m-24 py-4'>
-			<h2 className='mb-16 text-center text-3xl font-bold text-main underline underline-offset-4 dark:text-secondary/90'>
+		<section id='contact-me' className='py-4 my-5 scroll-m-24'>
+			<h2 className='mb-16 text-3xl font-bold text-center underline text-main underline-offset-4 dark:text-secondary/90'>
 				CONTACT ME
 			</h2>
 
 			{/* Direct Contact */}
-			<div className=' flex flex-wrap justify-center gap-4 px-3'>
+			<div className='flex flex-wrap gap-4 justify-center px-3'>
 				<DirectContact
 					href={'mailto:aniloli42@gmail.com'}
-					text={'aniloli42@gmail.com'}>
+					text={'Mail Me'}>
 					<MdMail />
 				</DirectContact>
-				<DirectContact href={'tel:+9779806242024'} text={'+977 9806242024'}>
+				<DirectContact href={'tel:+9779806242024'} text={'Call Me'}>
 					<MdLocalPhone />
 				</DirectContact>
-				<DirectContact href={'https://m.me/anil.oli.4321'} text={'Message Me'}>
+				<DirectContact href={'https://m.me/aniloli.me'} text={'Message Me'}>
 					<BsMessenger />
 				</DirectContact>
 			</div>

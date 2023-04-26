@@ -1,12 +1,11 @@
-import Link from 'next/link'
 import React from 'react'
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
-import SocialLink from './SocialLink'
 import SectionButton from './SectionButton'
+import SocialLink from './SocialLink'
 
 const HeroSection = () => {
   return (
-    <section className='flex flex-col items-center min-h-screen p-4'>
+    <section className='flex flex-col items-center p-4 min-h-screen'>
       <h1 className='my-16 mb-4 text-5xl font-black text-center dark:text-secondary/90 text-main md:text-7xl'>
         ANIL OLI
       </h1>
@@ -20,7 +19,7 @@ const HeroSection = () => {
         <SectionButton link={'#contact-me'} name={'PORTFOLIO'} />
       </div>
 
-      <div className='flex items-center gap-10 mt-20 mb-6 outline-none'>
+      <div className='flex gap-10 items-center mt-20 mb-6 outline-none'>
         <SocialLink
           link={'https://github.com/aniloli42'}
           ariaLabel={'github profile link'}
