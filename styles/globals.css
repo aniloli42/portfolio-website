@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  @apply transition-colors ease-in-out duration-500;
+}
+
 button,
 a {
   @apply select-none;
@@ -30,7 +34,7 @@ a {
 
 @layer components {
   .custom-shadow {
-    @apply shadow-[-1px_-1px_2px,2px_2px_2px] shadow-main/20;
+    @apply shadow-[-1px_-1px_4px,2px_2px_4px] shadow-main/20;
   }
 }
 
