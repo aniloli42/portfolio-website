@@ -5,7 +5,7 @@ const NavLink = ({ href, text, active, toggleNavActive }) => {
   return (
     <Link href={href} replace>
       <a
-        className={`text-xl font-medium outline-none transition duration-150 ease-out hover:text-main focus-visible:text-main md:text-sm dark:hover:text-secondary/90 darK:focus-visible:text-secondary/90
+        className={`text-xl font-medium outline-none transition duration-150 ease-out hover:text-main focus-visible:text-main md:text-sm dark:hover:text-secondary/90 dark:focus-visible:text-secondary/90 uppercase
         ${
           active === href
             ? 'text-main dark:text-secondary/90'

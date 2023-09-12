@@ -2,16 +2,16 @@ import Head from 'next/head'
 import {
   AboutMe,
   ContactMe,
+  Header,
   HeroSection,
   MyJourney,
-  Header,
   Portfolio,
   Skills,
 } from '../components'
 import {
   getJourneys,
-  getProjects,
   getProjectTypes,
+  getProjects,
   getResumeLink,
   getSkills,
 } from '../services'

@@ -1,32 +1,24 @@
 import React from 'react'
 import Journey from './Journey'
 
-const datas = [
-	{
-		start: '2018',
-		end: '2020',
-		title: 'DCOM',
-		description: 'Hello World',
-	},
-]
-
 const MyJourney = ({ journeys }) => {
-	return (
-		<section
-			className='flex scroll-m-20  items-center justify-center px-4'
-			id='myjourney'>
-			<div className='h-full max-w-xs py-16 sm:max-w-lg md:max-w-xl lg:max-w-3xl'>
-				<h2 className='mb-16 text-center text-3xl font-bold text-main dark:text-secondary/90 underline underline-offset-4'>
-					MY JOURNEY
-				</h2>
-				<div className='relative my-12 border-l-4 border-main/50 dark:border-secondary/50'>
-					{journeys?.map(journey => (
-						<Journey key={journey.node.id} {...journey.node} />
-					))}
-				</div>
-			</div>
-		</section>
-	)
+  return (
+    <section
+      className='flex justify-center items-center px-4 scroll-m-20'
+      id='myjourney'
+    >
+      <div className='py-16 max-w-xs h-full sm:max-w-lg md:max-w-xl lg:max-w-3xl'>
+        <h2 className='mb-16 text-3xl font-bold text-center underline text-main dark:text-secondary/90 underline-offset-4'>
+          MY JOURNEY
+        </h2>
+        <div className='relative border-l-2 border-main/50 dark:border-secondary/50'>
+          {journeys?.map((journey) => (
+            <Journey key={journey.id} {...journey} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default MyJourney
