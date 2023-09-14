@@ -49,17 +49,18 @@ const Home = ({ journeys, projects, projectType, skills, resumeLink }) => {
         />
 
         {/* Open Graph Setup */}
-        <meta property='og:url' content='https://aniloli42.me' />
-        <meta property='og:title' content='Anil Oli | Portfolio' />
+        <meta
+          property='og:url'
+          content={`${process.env.NEXT_PUBLIC_DOMAIN ?? ''}`}
+        />
+        <meta name='og:site_name' content='Anil Oli Portfolio' />
+        <meta property='og:title' content='Anil Oli Portfolio' />
         <meta
           property='og:description'
           content='Anil Oli is a passionate developer who creates innovative systems using Typescript, Javascript, and various libraries to provide solutions that benefit others.'
         />
         <meta property='og:type' content='profile' />
-        <meta
-          property='og:image'
-          content={`${process.env.NEXT_PUBLIC_DOMAIN}/og.jpg`}
-        />
+        <meta property='og:image' content='/anil-og.png' />
         <meta property='og:image:width' content='900' />
         <meta property='og:image:height' content='600' />
       </Head>
