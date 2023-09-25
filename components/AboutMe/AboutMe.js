@@ -22,7 +22,7 @@ const AboutMe = ({ resumeLink }) => {
             rel='nofollow'
             target='_blank'
           >
-            Download CV
+            Download Resume
           </a>
         </Link>
       )}
