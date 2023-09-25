@@ -113,19 +113,17 @@ export const getResumeLink = async () => {
   try {
     const query = gql`
       {
-        resumeLinksConnection {
-          edges {
-            node {
-              resumeLink
-            }
+        detail(where: { fieldName: "resume" }) {
+          file {
+            url
           }
         }
       }
     `
 
-    const results = await graphcms.request(query)
+    const result = await graphcms.request(query)
 
-    return results.resumeLinksConnection.edges[0].node.resumeLink
+    return result.detail.file.url
   } catch (error) {
     console.error(error)
     return null
