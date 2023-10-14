@@ -22,7 +22,7 @@ const HeroSection = () => {
           ANIL OLI
         </h1>
         <p className='text-xl text-center dark:text-secondary/80 text-main/70'>
-          Full Stack DEVELOPER | TS/JS Stack
+          Software Developer - Typescript | Javascript
         </p>
       </div>
 
