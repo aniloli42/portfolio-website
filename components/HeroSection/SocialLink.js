@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const SocialLink = ({ link, children, ariaLabel }) => {
+const SocialLink = ({ link, icon, ariaLabel }) => {
   return (
     <Link href={link}>
       <a
@@ -9,7 +9,7 @@ const SocialLink = ({ link, children, ariaLabel }) => {
         className='text-3xl outline-none group text-main dark:text-secondary/70 hover:text-main/80 dark:hover:text-secondary/90 dark:focus-visible:text-secondary/90'
         aria-label={ariaLabel}
       >
-        {children}
+        {icon}
       </a>
     </Link>
   )

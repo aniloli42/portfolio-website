@@ -28,9 +28,7 @@ const HeroSection = () => {
 
       <div className='flex gap-10 items-center mt-20 mb-6 outline-none'>
         {socialLinks.map((socialLink) => (
-          <SocialLink key={socialLink.ariaLabel} link={socialLink.link}>
-            {socialLink.icon}
-          </SocialLink>
+          <SocialLink key={socialLink.ariaLabel} {...socialLink} />
         ))}
       </div>
     </section>
