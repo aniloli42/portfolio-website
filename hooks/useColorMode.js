@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 const addDarkHeadClass = () =>
   window.document.querySelector('html').classList.add('dark')
@@ -10,20 +11,12 @@ const useColorMode = () => {
   const [colorMode, setColorMode] = useState()
 
   useEffect(() => {
-    const userColorModePrefs = localStorage.getItem('colorMode')
-
-    if (userColorModePrefs == null || userColorModePrefs === 'dark') {
-      addDarkHeadClass()
-      setColorMode('dark')
-      return
-    }
-
-    setColorMode('light')
-    removeDarkHeadClass()
+    const themeMode = localStorage.getItem('colorMode')
+    if (themeMode === 'light') return setColorMode('light')
+    setColorMode('dark')
   }, [])
 
   const handleColorMode = () => {
-    console.log(colorMode)
     if (colorMode === 'dark') {
       localStorage.setItem('colorMode', 'light')
       removeDarkHeadClass()

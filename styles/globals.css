@@ -6,8 +6,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html.dark {
+  @apply bg-zinc-900;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background-color: #110;
+}
+
 * {
-  @apply transition-colors duration-300 ease-in-out;
+  @apply transition-colors duration-150 ease-in;
 }
 
 button,
@@ -28,20 +36,8 @@ a {
   background-color: rgb(241, 241, 238);
 }
 
-::-webkit-scrollbar:hover ::-webkit-scrollbar-thumb {
-  background-color: #fff;
-}
-
 @layer components {
   .custom-shadow {
     @apply shadow-[-1px_-1px_4px,2px_2px_4px] shadow-main/20;
   }
-}
-
-html.dark {
-  @apply bg-zinc-900;
-}
-
-html.dark ::-webkit-scrollbar-track {
-  background-color: #110;
 }
