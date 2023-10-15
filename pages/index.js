@@ -57,6 +57,10 @@ const Home = ({ journeys, projects, projectType, skills, resumeLink }) => {
         />
         <meta property='og:type' content='profile' />
         <meta
+          property='og:url'
+          content={`${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}`}
+        />
+        <meta
           property='og:image'
           content={`${process.env.NEXT_PUBLIC_WEBSITE_DOMAIN}/anil-og.png`}
         />
