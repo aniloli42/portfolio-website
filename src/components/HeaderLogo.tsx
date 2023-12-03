@@ -11,6 +11,7 @@ export default function HeaderLogo() {
 				alt="Camera place over the table with lining pattern"
 				width={120}
 				height={120}
+				priority
 			/>
 		</>
 	)
