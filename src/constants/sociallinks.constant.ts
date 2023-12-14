@@ -1,6 +1,6 @@
 import { SocialLink } from '@@types/sociallink.type'
-import { FaStackOverflow } from 'react-icons/fa6'
-import { RxGithubLogo, RxLinkedinLogo, RxTwitterLogo } from 'react-icons/rx'
+import { FaStackOverflow, FaXTwitter } from 'react-icons/fa6'
+import { RxGithubLogo, RxLinkedinLogo } from 'react-icons/rx'
 
 export const SOCIAL_LINKS: SocialLink[] = [
 	{
@@ -21,6 +21,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
 	{
 		title: 'Twitter',
 		link: 'https://twitter.com/aniloli42',
-		icon: RxTwitterLogo
+		icon: FaXTwitter
 	}
 ]
