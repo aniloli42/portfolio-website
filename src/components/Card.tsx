@@ -1,7 +1,11 @@
 import { ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-type CardProps = { className?: string; children: ReactNode }
+type CardProps = {
+	className?: string
+	children: ReactNode
+}
+
 export default function Card({ className, children }: CardProps) {
 	return (
 		<div
@@ -15,7 +19,10 @@ export default function Card({ className, children }: CardProps) {
 	)
 }
 
-type CardTitleProps = { children: ReactNode }
+type CardTitleProps = {
+	children: ReactNode
+}
+
 Card.title = ({ children }: CardTitleProps) => {
 	return (
 		<h2 className="text-xl sm:text-2xl font-semibold text-gray-400">
