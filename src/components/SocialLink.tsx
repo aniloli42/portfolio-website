@@ -1,15 +1,12 @@
 'use client'
-
 import { SocialLink } from '@@types/sociallink.type'
 import { ReactNode } from 'react'
 
 type SocialLinkProps = SocialLink & { socialIcon: ReactNode }
 
-export default function SocialLink({
-	title,
-	link,
-	socialIcon
-}: SocialLinkProps) {
+export default function SocialLink(props: SocialLinkProps) {
+	const { link, title, socialIcon } = props
+
 	return (
 		<a
 			href={link}
