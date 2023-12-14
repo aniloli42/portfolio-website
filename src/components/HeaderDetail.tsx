@@ -5,7 +5,7 @@ type Props = {}
 
 export default function HeaderDetail({}: Props) {
 	return (
-		<Card className="pt-0 sm:pt-0 mt-0 flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-end rounded-t-none ">
+		<Card className="flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-end">
 			<HeaderIntro />
 			<SocialLinks />
 		</Card>
