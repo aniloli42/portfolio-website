@@ -10,7 +10,7 @@ export default function Card({ className, children }: CardProps) {
 	return (
 		<section
 			className={twMerge(
-				'py-5 px-6 sm:px-10 bg-gray-800 rounded-md mt-3',
+				'p-5 sm:px-8 bg-gray-800 rounded-md mt-3',
 				className
 			)}
 		>

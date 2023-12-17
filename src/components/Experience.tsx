@@ -20,8 +20,8 @@ const Experience = ({
 					src={companyLogo}
 					width={36}
 					height={36}
-					objectFit="cover"
 					alt={companyName}
+					className="object-cover"
 				/>
 			)}
 			<div>

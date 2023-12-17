@@ -6,7 +6,7 @@ import Skills from '@components/Skills'
 
 export default function Home() {
 	return (
-		<main className="bg-gray-900 min-h-full flex flex-col">
+		<main className="bg-gray-900 min-h-full flex flex-col py-4">
 			<Container>
 				<Header />
 				<Experiences />
