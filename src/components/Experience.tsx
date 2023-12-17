@@ -25,14 +25,14 @@ const Experience = ({
 				/>
 			)}
 			<div>
-				<h4 className="text-gray-400 font-medium text-lg flex gap-1">
-					{position}
-					<span>-</span>
+				<h4 className="text-gray-300 font-medium sm:text-lg leading-5">
 					<a
 						href={companyURL}
 						target="_blank"
-						className="hover:underline focus-visible:underline outline-none flex items-center gap-1"
+						className="hover:underline hover:text-gray-400 focus-visible:text-gray-400 focus-visible:underline outline-none flex gap-1 flex-wrap items-center"
 					>
+						{position}
+						<span>-</span>
 						{companyName}
 						<RiExternalLinkFill />
 					</a>
