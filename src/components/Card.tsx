@@ -8,14 +8,14 @@ type CardProps = {
 
 export default function Card({ className, children }: CardProps) {
 	return (
-		<div
+		<section
 			className={twMerge(
-				'p-4 px-6 sm:px-10 bg-gray-800 rounded-md mt-3',
+				'py-5 px-6 sm:px-10 bg-gray-800 rounded-md mt-3',
 				className
 			)}
 		>
 			{children}
-		</div>
+		</section>
 	)
 }
 

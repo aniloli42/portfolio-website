@@ -6,7 +6,7 @@ type ContainerProps = {
 
 export default function Container({ children }: ContainerProps) {
 	return (
-		<div className="w-[90%] sm:w-auto sm:min-w-[95vw] md:min-w-[80vw] lg:min-w-[60vw] mx-auto ">
+		<div className="w-[90%] sm:w-auto sm:max-w-[95vw] md:max-w-[80vw] lg:max-w-[60vw] mx-auto ">
 			{children}
 		</div>
 	)
