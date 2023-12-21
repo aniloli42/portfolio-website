@@ -1,11 +1,11 @@
-import type { Skill } from '@@types/skill.type'
+import type { Skill as TSkill } from '@@types/skill.type'
 import React from 'react'
-import SkillComp from './Skill'
+import Skill from './Skill'
 import capitalizeFirstletter from '@utils/capitalizeFirstletter'
 
 type Props = {
 	categoryTitle: string
-	skills: Skill[]
+	skills: TSkill[]
 }
 
 const SkillCategory = ({ categoryTitle, skills }: Props) => {
@@ -16,16 +16,10 @@ const SkillCategory = ({ categoryTitle, skills }: Props) => {
 			</h3>
 			<div className="flex gap-2 flex-wrap">
 				{skills.map((skill) => (
-					<SkillComp
+					<Skill
 						key={skill.name}
 						{...skill}
-						logo={
-							skill.logo ? (
-								<skill.logo className="w-4 h-4" />
-							) : (
-								<></>
-							)
-						}
+						logo={skill.logo ? <skill.logo className="w-4 h-4" /> : <></>}
 					/>
 				))}
 			</div>

@@ -5,8 +5,8 @@ import SkillCategory from './SkillCategory'
 export default function Skills() {
 	return (
 		<Card>
-			<Card.title>Skills</Card.title>
-			<div className="flex flex-col gap-2.5 mt-2">
+			<Card.Title>Skills</Card.Title>
+			<Card.Container>
 				{Object.entries(SKILLS).map(([title, skills]) => (
 					<SkillCategory
 						categoryTitle={title}
@@ -14,7 +14,7 @@ export default function Skills() {
 						skills={skills}
 					/>
 				))}
-			</div>
+			</Card.Container>
 		</Card>
 	)
 }

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactElement, ReactNode } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 type CardProps = {
@@ -23,10 +23,21 @@ type CardTitleProps = {
 	children: ReactNode
 }
 
-Card.title = ({ children }: CardTitleProps) => {
+const Title = ({ children }: CardTitleProps) => {
 	return (
 		<h2 className="text-xl sm:text-2xl font-semibold text-gray-400">
 			{children}
 		</h2>
 	)
 }
+
+type CardContainerProps = {
+	children: ReactNode
+}
+
+const Container = ({ children }: CardContainerProps) => {
+	return <div className="mt-4 flex flex-col gap-3">{children}</div>
+}
+
+Card.Title = Title
+Card.Container = Container

@@ -21,6 +21,7 @@ import {
 	SiPrisma,
 	SiPuppeteer,
 	SiReact,
+	SiRedis,
 	SiRender,
 	SiSass,
 	SiTailwindcss,
@@ -119,6 +120,10 @@ export const SKILLS: SkillType = {
 		{
 			name: 'GraphQL',
 			logo: SiGraphql
+		},
+		{
+			name: 'Redis',
+			logo: SiRedis
 		},
 		{
 			name: 'MySQL',
