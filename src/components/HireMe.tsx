@@ -1,10 +1,8 @@
-import { SiFiverr, SiGmail, SiRescuetime, SiUpwork } from 'react-icons/si'
+import { SiFiverr, SiGmail, SiUpwork } from 'react-icons/si'
 import Badge from './Badge'
 import Card from './Card'
 
-type Props = {}
-
-const HireMe = (props: Props) => {
+const HireMe = () => {
 	return (
 		<Card className="flex flex-row flex-wrap gap-2">
 			<Badge link="https://www.upwork.com/workwith/aniloli42">

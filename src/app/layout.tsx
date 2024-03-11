@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import '@/styles/globals.css'
 import { SITE_DESCRIPTION, SITE_TITLE } from '@constants/site.constant'
 
@@ -74,6 +75,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className="font-sans">{children}</body>
+			<GoogleAnalytics gaId="G-27VY6DQ465" />
 		</html>
 	)
 }
