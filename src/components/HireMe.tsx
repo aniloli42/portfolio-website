@@ -8,8 +8,7 @@ const HireMe = () => {
 			<Badge link="https://media.graphassets.com/u9qcgdGTTm5RA9ylCpRg">
 				Get Resume
 			</Badge>
-
-			Badge link="mailto:aniloli42@gmail.con?subject=Your Query&body=Your Message">
+			<Badge link="mailto:aniloli42@gmail.con?subject=Your Query&body=Your Message">
 				<SiGmail />
 				Send Email
 			</Badge>
