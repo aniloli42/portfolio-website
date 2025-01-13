@@ -5,7 +5,7 @@ import Card from './Card'
 const HireMe = () => {
 	return (
 		<Card className="flex flex-row flex-wrap gap-2">
-			<Badge link="https://media.graphassets.com/u9qcgdGTTm5RA9ylCpRg">
+			<Badge link="https://media.graphassets.com/SV332GmqSomYCruGzR9Y">
 				Get Resume
 			</Badge>
 			<Badge link="mailto:aniloli42@gmail.con?subject=Your Query&body=Your Message">
