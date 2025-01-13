@@ -5,11 +5,11 @@ import Card from './Card'
 const HireMe = () => {
 	return (
 		<Card className="flex flex-row flex-wrap gap-2">
-			<Badge link="https://media.graphassets.com/wfZIu9CAQsOS88xqRS9L">
+			<Badge link="https://media.graphassets.com/u9qcgdGTTm5RA9ylCpRg">
 				Get Resume
 			</Badge>
 
-			<Badge link="mailto:aniloli42@gmail.con?subject=Your Query&body=Your Message">
+			Badge link="mailto:aniloli42@gmail.con?subject=Your Query&body=Your Message">
 				<SiGmail />
 				Send Email
 			</Badge>
